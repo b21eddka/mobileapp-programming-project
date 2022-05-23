@@ -4,18 +4,18 @@ import com.google.gson.annotations.SerializedName;
 
 public class Djur {
 
-    private String ID;
-    @SerializedName("Name")
-    private String Namn;
-    private AuxData auxData;
+    private String id;
+    @SerializedName("name")
+    private String namn;
+    private Auxdata auxdata;
 
-    public class AuxData{
+    public class Auxdata{
 
         private String kommentar;
         private String img;
         private String skala;
 
-        public AuxData(String kommentar, String img, String skala){
+        public Auxdata(String kommentar, String img, String skala){
             this.kommentar = kommentar;
             this.img = img;
             this.skala = skala;
@@ -36,21 +36,21 @@ public class Djur {
     }
 
     public String getID() {
-        return ID;
+        return id;
     }
 
     public String getNamn() {
-        return Namn;
+        return namn;
     }
 
-    public AuxData getAuxData() {
-        return auxData;
+    public Auxdata getAuxData() {
+        return auxdata;
     }
 
-    public Djur(String ID, String Namn, AuxData AuxData){
-        this.ID = ID;
-        this.Namn = Namn;
-        this.auxData = AuxData;
+    public Djur(String id, String namn, Auxdata auxdata){
+        this.id = id;
+        this.namn = namn;
+        this.auxdata = auxdata;
     }
 
 }
